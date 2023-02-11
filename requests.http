@@ -28,7 +28,7 @@ Content-Type: application/json
 }
 
 ### User Destroy
-DELETE http://localhost:3000/users/1.json 
+DELETE http://localhost:3000/users/2.json 
 
 ### Sessions New
 POST http://localhost:3000/sessions.json  
