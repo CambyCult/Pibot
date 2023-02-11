@@ -15,3 +15,12 @@ Content-Type: application/json
   "password": "password",
   "password_confirmation": "password"
 }
+
+### Sessions New
+POST http://localhost:3000/sessions.json  
+Content-Type: application/json
+
+{
+  "email": "jim@test.com",
+  "password": "password"
+}
