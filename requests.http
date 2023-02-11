@@ -1,0 +1,17 @@
+### Users Index
+GET http://localhost:3000/users.json
+
+### Users Show
+GET http://localhost:3000/users/1.json
+
+### Users Create
+POST http://localhost:3000/users.json  
+Content-Type: application/json
+
+{
+  "first_name": "Jim",
+  "last_name": "Neville",
+  "email": "jim@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
