@@ -16,11 +16,22 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
+### Users Update
+PATCH http://localhost:3000/users/1.json  
+Content-Type: application/json
+
+{
+  "first_name": "Jacky",
+  "email": "jacky@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
 ### Sessions New
 POST http://localhost:3000/sessions.json  
 Content-Type: application/json
 
 {
-  "email": "jim@test.com",
+  "email": "jacky@test.com",
   "password": "password"
 }
