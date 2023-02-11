@@ -27,6 +27,9 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
+### User Destroy
+DELETE http://localhost:3000/users/1.json 
+
 ### Sessions New
 POST http://localhost:3000/sessions.json  
 Content-Type: application/json

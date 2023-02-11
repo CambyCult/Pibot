@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
-    render json: { message: "okay" }
+    users = User.all
+    render json: users.as_json
   end
 
   def show
@@ -37,5 +38,11 @@ class UsersController < ApplicationController
     else
       render json: { error: user.errors.full_messages }
     end
+  end
+
+  def destroy
+    user = User.find_by(id: params["id"])
+    user.destroy
+    render json: { message: "user was deleted" }
   end
 end
