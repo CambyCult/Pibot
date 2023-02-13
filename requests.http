@@ -9,22 +9,22 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "first_name": "Harry",
-  "last_name": "Duggan",
+  "first_name": "Aladdin",
+  "last_name": "Prince Ali",
   "email": "Harry@test.com",
   "password": "password",
-  "password_confirmation": "password"
+  "password_confirmation": "password",
+  "rig_id": null
 }
 
 ### Users Update
-PATCH http://localhost:3000/users/7.json  
+PATCH http://localhost:3000/users/9.json  
 Content-Type: application/json
 
 {
-  "first_name": "Jacky",
-  "email": "Jacky@test.com",
   "password": "password",
-  "password_confirmation": "password"
+  "password_confirmation": "password",
+  "rig_id": 1
 }
 
 ### User Destroy

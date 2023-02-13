@@ -16,6 +16,7 @@ class UsersController < ApplicationController
       email: params["email"],
       password: params["password"],
       password_confirmation: params["password_confirmation"],
+      rig_id: nil,
     )
     if user.save
       render json: { message: "user created" }
@@ -32,6 +33,7 @@ class UsersController < ApplicationController
     user.email = params["email"] || user.email
     user.password = params["password"] || user.password
     user.password_confirmation = params["password_confirmation"] || user.password_confirmation
+    user.rig_id = params["rig_id"] || user.rig_id
 
     if user.save
       render json: { message: "user info updated" }
