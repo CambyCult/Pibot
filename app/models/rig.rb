@@ -1,0 +1,2 @@
+class Rig < ApplicationRecord
+end
