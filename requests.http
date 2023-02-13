@@ -9,20 +9,20 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "first_name": "Jim",
-  "last_name": "Neville",
-  "email": "jim@test.com",
+  "first_name": "Harry",
+  "last_name": "Duggan",
+  "email": "Harry@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
 
 ### Users Update
-PATCH http://localhost:3000/users/1.json  
+PATCH http://localhost:3000/users/7.json  
 Content-Type: application/json
 
 {
   "first_name": "Jacky",
-  "email": "jacky@test.com",
+  "email": "Jacky@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -35,6 +35,6 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "jacky@test.com",
+  "email": "Neil@test.com",
   "password": "password"
 }
