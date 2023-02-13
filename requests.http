@@ -38,3 +38,20 @@ Content-Type: application/json
   "email": "Neil@test.com",
   "password": "password"
 }
+
+### Rig Index
+GET http://localhost:3000/rigs.json 
+
+### Rig Show
+GET http://localhost:3000/rigs/1.json 
+
+### Rig Create
+POST http://localhost:3000/rigs.json  
+Content-Type: application/json
+
+{
+  "name": "medic 2"
+}
+
+### Rig Destroy
+DELETE http://localhost:3000/rigs/2.json 

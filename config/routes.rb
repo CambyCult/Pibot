@@ -8,4 +8,10 @@ Rails.application.routes.draw do
 
   #Login Session
   post "/sessions" => "sessions#create"
+
+  #Rig Actions
+  get "/rigs" => "rigs#index"
+  get "/rigs/:id" => "rigs#show"
+  post "/rigs" => "rigs#create"
+  delete "/rigs/:id" => "rigs#destroy"
 end
