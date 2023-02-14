@@ -13,8 +13,7 @@ Content-Type: application/json
   "last_name": "Prince Ali",
   "email": "Harry@test.com",
   "password": "password",
-  "password_confirmation": "password",
-  "rig_id": null
+  "password_confirmation": "password"
 }
 
 ### Users Update
@@ -28,7 +27,7 @@ Content-Type: application/json
 }
 
 ### User Destroy
-DELETE http://localhost:3000/users/2.json 
+DELETE http://localhost:3000/users/14.json 
 
 ### Sessions New
 POST http://localhost:3000/sessions.json  

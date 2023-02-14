@@ -10,10 +10,10 @@ User.create(
 )
 
 12.times do
-  first_name = Faker::Name.first_name
+  first_name = Faker::Name.unique.first_name
   users = User.new(
-    first_name: first_name,
-    last_name: Faker::Name.last_name,
+    first_name: first_name.downcase,
+    last_name: Faker::Name.last_name.downcase,
     email: first_name + "@test.com",
     password: "password",
     password_confirmation: "password",
