@@ -18,7 +18,7 @@ Content-Type: application/json
 }
 
 ### Users Update
-PATCH http://localhost:3000/users/9.json  
+PATCH http://localhost:3000/users/6.json  
 Content-Type: application/json
 
 {
