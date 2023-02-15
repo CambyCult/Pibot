@@ -14,4 +14,11 @@ Rails.application.routes.draw do
   get "/rigs/:id" => "rigs#show"
   post "/rigs" => "rigs#create"
   delete "/rigs/:id" => "rigs#destroy"
+
+  #Message Actions
+  get "/messages" => "messages#index"
+  get "/messages/:id" => "messages#show"
+  post "/messages" => "messages#create"
+  patch "/messages/:id" => "messages#update"
+  delete "/messages/:id" => "messages#destroy"
 end
