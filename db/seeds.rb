@@ -14,7 +14,7 @@ User.create(
   users = User.new(
     first_name: first_name.downcase,
     last_name: Faker::Name.last_name.downcase,
-    email: first_name + "@test.com",
+    email: first_name.downcase + "@test.com",
     password: "password",
     password_confirmation: "password",
   )
@@ -27,3 +27,10 @@ end
     name: rig_name,
   )
 end
+
+Message.create!(
+  date: Time.now,
+  shift: "Second",
+  content: "Clean and well stocked. Weak AC.",
+  user_id: 6,
+)
