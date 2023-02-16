@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
   def create
     message = Message.new(
       date: params["date"],
-      shift: params["first"],
+      shift: params["shift"],
       content: params["content"],
       user_id: params["user_id"],
     )
@@ -21,5 +21,27 @@ class MessagesController < ApplicationController
     else
       render json: { error: message.errors.full_messages }
     end
+  end
+
+  def update
+    message = Message.find_by(id: params["id"])
+
+    message.date = params["date"] || message.date
+    message.shift = params["shift"] || message.shift
+    message.content = params["content"] || message.content
+    message.user_id = params["user_id"] || message.user_id
+
+    if message.save
+      render json: { message: "message succesfully updated" }
+    else
+      render json: { error: message.errors.full_messages }
+    end
+  end
+
+  def destroy
+    message = Message.find_by(id: params["id"])
+    message.destroy
+
+    render json: { message: "message deleted" }
   end
 end

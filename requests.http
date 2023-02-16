@@ -34,10 +34,11 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "Neil@test.com",
+  "email": "Dewitt@test.com",
   "password": "password"
 }
 
+########### RIG ##############
 ### Rig Index
 GET http://localhost:3000/rigs.json 
 
@@ -54,3 +55,33 @@ Content-Type: application/json
 
 ### Rig Destroy
 DELETE http://localhost:3000/rigs/2.json 
+
+######## Messages ############
+### Message Index
+GET http://localhost:3000/messages.json 
+
+### Message Show
+GET http://localhost:3000/messages/1.json 
+
+### Message Create
+POST http://localhost:3000/messages.json 
+Content-Type: application/json
+
+{
+  "date": "2023-02-12 15:00:06",
+  "shift": "First",
+  "content": "Clean and well stocked.",
+  "user_id": 3
+}
+
+### Message Update
+PATCH http://localhost:3000/messages/1.json 
+Content-Type: application/json
+
+{
+  "shift": "First",
+  "date": "2023-02-15 19:00:06"
+}
+
+### Message Destroy
+DELETE http://localhost:3000/messages/2.json 
