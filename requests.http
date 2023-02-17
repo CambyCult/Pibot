@@ -1,5 +1,17 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NzY2ODcwNjB9.ye967Hl0XRfjmm7IVHj_k4feQaaGsvFS6GItwiQM4rE
+
+### Sessions New
+POST http://localhost:3000/sessions.json  
+Content-Type: application/json
+
+{
+  "email": "roman@test.com",
+  "password": "password"
+}
+
 ### Users Index
 GET http://localhost:3000/users.json
+Authorization: Bearer {{jwt}}
 
 ### Users Show
 GET http://localhost:3000/users/1.json
@@ -29,14 +41,7 @@ Content-Type: application/json
 ### User Destroy
 DELETE http://localhost:3000/users/14.json 
 
-### Sessions New
-POST http://localhost:3000/sessions.json  
-Content-Type: application/json
 
-{
-  "email": "roman@test.com",
-  "password": "password"
-}
 
 ########### RIG ##############
 ### Rig Index
