@@ -23,7 +23,7 @@ Content-Type: application/json
 {
   "first_name": "Aladdin",
   "last_name": "Prince Ali",
-  "email": "Harry@test.com",
+  "email": "aladdin@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -59,14 +59,14 @@ Content-Type: application/json
 }
 
 ### Rig Destroy
-DELETE http://localhost:3000/rigs/2.json 
+DELETE http://localhost:3000/rigs/7.json 
 
 ######## Messages ############
 ### Message Index
 GET http://localhost:3000/messages.json 
 
 ### Message Show
-GET http://localhost:3000/messages/1.json 
+GET http://localhost:3000/messages/2.json 
 
 ### Message Create
 POST http://localhost:3000/messages.json 
@@ -80,13 +80,30 @@ Content-Type: application/json
 }
 
 ### Message Update
-PATCH http://localhost:3000/messages/1.json 
+PATCH http://localhost:3000/messages/2.json 
 Content-Type: application/json
 
 {
   "shift": "First",
-  "date": "2023-02-15 19:00:06"
+  "date": "2023-02-15 19:00:06",
+  "content": "Testing Update Action"
 }
 
 ### Message Destroy
 DELETE http://localhost:3000/messages/2.json 
+
+########### CHECKLIST #############
+
+### Checklist Index
+GET http://localhost:3000/checklists.json 
+
+### Checklist Show
+GET http://localhost:3000/checklists/1.json 
+
+### Checklist Create
+POST http://localhost:3000/checklists.json 
+Content-Type: application/json
+
+{
+  
+}

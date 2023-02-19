@@ -21,4 +21,11 @@ Rails.application.routes.draw do
   post "/messages" => "messages#create"
   patch "/messages/:id" => "messages#update"
   delete "/messages/:id" => "messages#destroy"
+
+  #Checklist Actions
+  get "/checklists" => "checklists#index"
+  get "/checklists/:id" => "checklists#show"
+  post "/checklists" => "checklists#create"
+  patch "/checklists/:id" => "checklists#update"
+  delete "/checklists/:id" => "checklists#destroy"
 end

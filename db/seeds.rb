@@ -34,3 +34,4 @@ Message.create!(
   content: "Clean and well stocked. Weak AC.",
   user_id: 6,
 )
+
