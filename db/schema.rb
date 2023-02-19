@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_18_212719) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_19_035020) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,7 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_18_212719) do
     t.boolean "phillips_screwdriver", default: false
     t.boolean "center_punch", default: false
     t.integer "cones_min", default: 3
-    t.integer "cones_actual"
+    t.integer "cones_actual", default: 0
     t.boolean "dot_erg", default: false
     t.boolean "emergency_lights", default: false
     t.boolean "grill_lights", default: false
