@@ -1,4 +1,6 @@
 class ChecklistsController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show, :update]
+
   def index
     checklists = Checklist.all
     render json: checklists.as_json
@@ -165,6 +167,7 @@ class ChecklistsController < ApplicationController
       "wastebag_min",
       "wastebag_actual",
       "drug_lock",
+      "rig_id",
     ]
     arr.each do |item|
       checklist[item] = params[item] || checklist[item]

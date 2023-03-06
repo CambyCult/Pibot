@@ -1,11 +1,21 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NzY2ODcwNjB9.ye967Hl0XRfjmm7IVHj_k4feQaaGsvFS6GItwiQM4rE
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzgyMjU3OTR9.Zm3svWW3o9yW46E-9uYm3jtuQQ8ctCtceaLVmeEs0_I
 
-### Sessions New
+@jwt2 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzgyMjg5ODF9.WcL0sSk5I8cu7bkzRvL6uodfMTl3q0NAEWAKyNon36g
+
+### Sessions New (Supervisor)
 POST http://localhost:3000/sessions.json  
 Content-Type: application/json
 
 {
-  "email": "roman@test.com",
+  "email": "jim@test.com",
+  "password": "password"
+}
+### Sessions New (Field Tech)
+POST http://localhost:3000/sessions.json  
+Content-Type: application/json
+
+{
+  "email": "gail@test.com",
   "password": "password"
 }
 
@@ -102,10 +112,11 @@ GET http://localhost:3000/checklists/1.json
 
 ### Checklist Create
 POST http://localhost:3000/checklists.json 
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  
+
 }
 
 ### Checklist Update
