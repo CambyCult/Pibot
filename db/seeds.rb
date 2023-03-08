@@ -28,10 +28,18 @@ end
   )
 end
 
+index = 1
+while index <= 6
+  checklist = Checklist.new(
+    rig_id: index,
+  )
+  index = index + 1
+  checklist.save
+end
+
 Message.create!(
   date: Time.now,
   shift: "Second",
   content: "Clean and well stocked. Weak AC.",
   user_id: 6,
 )
-

@@ -120,13 +120,14 @@ Content-Type: application/json
 }
 
 ### Checklist Update
-PATCH http://localhost:3000/checklists/2.json 
+PATCH http://localhost:3000/checklists/1.json 
 Content-Type: application/json
 
 {
   "exterior_clean": true,
   "cones_actual": "15",
-  "siren": true
+  "siren": true,
+  "rig_id": 8
 }
 
 ### Checklist Destroy
