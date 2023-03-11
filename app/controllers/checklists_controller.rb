@@ -173,6 +173,8 @@ class ChecklistsController < ApplicationController
       checklist[item] = params[item] || checklist[item]
     end
     if checklist.save
+      cloned_checklist = checklist.amoeba_dup
+      cloned_checklist.save
       render json: { message: "checklist updated" }
     else
       render json: { error: checklist.errors.full_messages }

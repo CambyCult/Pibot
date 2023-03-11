@@ -1,6 +1,6 @@
-@jwt_supe = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg2MzU4NzR9.u6zBnt_W5TAYMVGvp4CdiCWhx97k7l8ypfSNsNbVAs0
+@jwt_supe = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg2NjIzMjN9.RVBwre7OqHsFJLUG70stK4R7M7xhaIKqy23VwTnXKW8
 
-@jwt_field = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Nzg2MzU5Njd9.CkcEjS3fqgp7nltELZymB8naKopKBtY-0An2loIUaHQ
+@jwt_field = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Nzg2NjIzMDd9.f-wdxG9wCV7KSwaqQQFQA1FsDhaRPbhS_lhObNAYsw8
 
 ### Sessions New (Supervisor)
 POST http://localhost:3000/sessions.json  
@@ -15,7 +15,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "catrice@test.com",
+  "email": "sherill@test.com",
   "password": "password"
 }
 
@@ -113,7 +113,7 @@ GET http://localhost:3000/checklists/1.json
 
 ### Checklist Create
 POST http://localhost:3000/checklists.json 
-Authorization: Bearer {{jwt}}
+Authorization: Bearer {{{{jwt_supe}}}}
 Content-Type: application/json
 
 {
@@ -128,7 +128,7 @@ Content-Type: application/json
   "exterior_clean": true,
   "cones_actual": "15",
   "siren": true,
-  "rig_id": 8
+  "rig_id": 2
 }
 
 ### Checklist Destroy
