@@ -1,4 +1,6 @@
 class RigsController < ApplicationController
+  before_action :authenticate_admin, except: [:show]
+
   def index
     rigs = Rig.all
     render json: rigs.as_json

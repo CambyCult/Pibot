@@ -1,6 +1,6 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzgyMjU3OTR9.Zm3svWW3o9yW46E-9uYm3jtuQQ8ctCtceaLVmeEs0_I
+@jwt_supe = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg2MzU4NzR9.u6zBnt_W5TAYMVGvp4CdiCWhx97k7l8ypfSNsNbVAs0
 
-@jwt2 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzgyMjg5ODF9.WcL0sSk5I8cu7bkzRvL6uodfMTl3q0NAEWAKyNon36g
+@jwt_field = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Nzg2MzU5Njd9.CkcEjS3fqgp7nltELZymB8naKopKBtY-0An2loIUaHQ
 
 ### Sessions New (Supervisor)
 POST http://localhost:3000/sessions.json  
@@ -15,13 +15,13 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "gail@test.com",
+  "email": "catrice@test.com",
   "password": "password"
 }
 
 ### Users Index
 GET http://localhost:3000/users.json
-Authorization: Bearer {{jwt}}
+Authorization: Bearer {{jwt_supe}}
 
 ### Users Show
 GET http://localhost:3000/users/1.json
@@ -56,6 +56,7 @@ DELETE http://localhost:3000/users/14.json
 ########### RIG ##############
 ### Rig Index
 GET http://localhost:3000/rigs.json 
+Authorization: Bearer {{jwt_supe}}
 
 ### Rig Show
 GET http://localhost:3000/rigs/1.json 
