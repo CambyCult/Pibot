@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_secure_password
+  has_secure_password :validations => false
   validates :email, presence: true
   validates :email, uniqueness: true
 
@@ -8,4 +8,6 @@ class User < ApplicationRecord
   def rig
     Rig.find_by(id: user_id)
   end
+
+  private
 end

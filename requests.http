@@ -43,8 +43,7 @@ PATCH http://localhost:3000/users/6.json
 Content-Type: application/json
 
 {
-  "password": "password",
-  "password_confirmation": "password",
+  
   "rig_id": 1
 }
 
