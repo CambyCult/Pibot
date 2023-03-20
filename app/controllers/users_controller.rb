@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user
+  # before_action :authenticate_admin, except: [:show]
 
   def index
     users = User.all
@@ -33,8 +33,8 @@ class UsersController < ApplicationController
     user.first_name = params["first_name"] || user.first_name
     user.last_name = params["last_name"] || user.last_name
     user.email = params["email"] || user.email
-    user.password = params["password"] || user.password
-    user.password_confirmation = params["password_confirmation"] || user.password_confirmation
+    # user.password = params["password"] || user.password
+    # user.password_confirmation = params["password_confirmation"] || user.password_confirmation
     user.rig_id = params["rig_id"] || user.rig_id
 
     if user.save
