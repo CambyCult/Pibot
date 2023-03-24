@@ -2,13 +2,15 @@ class ChecklistsController < ApplicationController
   before_action :authenticate_admin, except: [:index, :show, :update]
 
   def index
-    checklists = Checklist.all
-    render json: checklists.as_json
+    @checklists = Checklist.all
+    # render json: checklists.as_json
+    render template: "checklists/index"
   end
 
   def show
-    checklist = Checklist.find_by(id: params["id"])
-    render json: checklist.as_json
+    @checklist = Checklist.find_by(id: params["id"])
+    # render json: checklist.as_json
+    render template: "checklists/show"
   end
 
   def create

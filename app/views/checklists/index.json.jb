@@ -1,0 +1,12 @@
+@checklists.map do |checklist|
+  {
+    id: checklist.id,
+    rig_id: checklist.rig_id,
+    exterior_clean: checklist.exterior_clean,
+    interior_clean: checklist.interior_clean,
+    cones_min: checklist.cones_min,
+    cones_actual: checklist.cones_actual,
+    created_at: checklist.created_at,
+    updated_at: checklist.updated_at,
+  }
+end
