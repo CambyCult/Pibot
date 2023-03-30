@@ -2,7 +2,7 @@ user = User.find_by(id: params["user_id"])
 @messages.map do |message|
   {
     id: message.id,
-    date: message.date,
+    date: message.date.strftime("%m/%d/%Y"),
     content: message.content,
     shift: message.shift,
     user_id: message.user_id,
