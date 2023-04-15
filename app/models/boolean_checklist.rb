@@ -1,0 +1,2 @@
+class BooleanChecklist < ApplicationRecord
+end
