@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_15_131422) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_15_173400) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -178,6 +178,36 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_15_131422) do
     t.datetime "updated_at", null: false
     t.integer "rig_id"
     t.boolean "copy", default: false
+  end
+
+  create_table "item_checklists", force: :cascade do |t|
+    t.integer "extinguisher_min", default: 2
+    t.integer "extinguisher_actual", default: 0
+    t.integer "towels_min", default: 2
+    t.integer "towels_actual", default: 0
+    t.integer "adult_cannula_min", default: 4
+    t.integer "adult_cannula_actual", default: 0
+    t.integer "stethoscope_adult_min", default: 2
+    t.integer "stethoscope_adult_actual", default: 0
+    t.integer "triage_tags_min", default: 25
+    t.integer "triage_tags_actual", default: 0
+    t.integer "trauma_dressings_min", default: 4
+    t.integer "trauma_dressings_actual", default: 0
+    t.integer "roll_gauze_min", default: 12
+    t.integer "roll_gauze_actual", default: 0
+    t.integer "oral_glucose_min", default: 2
+    t.integer "oral_glucose_actual", default: 0
+    t.integer "splint_upper_min", default: 2
+    t.integer "splint_upper_actual", default: 0
+    t.integer "exam_gloves_min", default: 10
+    t.integer "exam_gloves_actual", default: 0
+    t.integer "shield_min", default: 4
+    t.integer "shield_actual", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "rig_id"
+    t.string "signed_by"
+    t.string "shift"
   end
 
   create_table "messages", force: :cascade do |t|
