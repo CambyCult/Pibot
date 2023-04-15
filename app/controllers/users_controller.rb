@@ -38,7 +38,7 @@ class UsersController < ApplicationController
     user.rig_id = params["rig_id"] || user.rig_id
 
     if user.save
-      render json: { message: "user info updated" }
+      render json: { message: "user info updated", selected_user: user["id"] }
     else
       render json: { error: user.errors.full_messages }
     end

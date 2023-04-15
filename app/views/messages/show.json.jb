@@ -1,0 +1,12 @@
+user = User.find_by(id: params["user_id"])
+{
+  id: @message.id,
+  date: @message.date,
+  content: @message.content,
+  shift: @message.shift,
+  user_id: @message.user_id,
+  user_first: @message.user.first_name,
+  user_last: @message.user.last_name,
+  created_at: @message.created_at,
+  updated_at: @message.updated_at,
+}

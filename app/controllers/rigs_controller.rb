@@ -1,9 +1,10 @@
 class RigsController < ApplicationController
-  before_action :authenticate_admin, except: [:show]
+  before_action :authenticate_admin, except: [:index, :show]
 
   def index
-    rigs = Rig.all
-    render json: rigs.as_json
+    @rigs = Rig.all
+    # render json: @rigs.as_json
+    render template: "rigs/index"
   end
 
   def show

@@ -132,3 +132,31 @@ Content-Type: application/json
 
 ### Checklist Destroy
 DELETE http://localhost:3000/checklists/1.json
+
+### Boolean Checklist Actions##############
+
+### Boolean Checklist Index
+GET http://localhost:3000/boolean_checklists.json
+
+### Boolean Checklist Show
+GET http://localhost:3000/boolean_checklists/1.json 
+
+### Boolean Checklist Create
+POST http://localhost:3000/boolean_checklists.json 
+Content-Type: application/json 
+
+{
+  "rig_id" : 46
+}
+
+### Boolean Checklist Update
+PATCH http://localhost:3000/boolean_checklists/1.json 
+Content-Type: application/json
+
+{
+  "oil_checked": true,
+  "shift": "first"
+}
+
+### Boolean Checklist Destroy
+DELETE http://localhost:3000/boolean_checklists/2.json 

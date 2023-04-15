@@ -1,0 +1,7 @@
+@rigs.map do |rig|
+  {
+    id: rig.id,
+    name: rig.name,
+    users: rig.users,
+  }
+end
