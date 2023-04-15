@@ -150,12 +150,15 @@ Content-Type: application/json
 }
 
 ### Boolean Checklist Update
-PATCH http://localhost:3000/boolean_checklists/1.json 
+PATCH http://localhost:3000/boolean_checklists/4.json 
 Content-Type: application/json
 
 {
+  "interior_clean": true,
   "oil_checked": true,
-  "shift": "first"
+  "rig_id": 4,
+  "sirens": true,
+  "exterior_done": true
 }
 
 ### Boolean Checklist Destroy
