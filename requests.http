@@ -173,9 +173,9 @@ GET http://localhost:3000/item_checklists/1.json
 
 
 ### Item Checklist Update
-PATCH http://localhost:3000/item_checklists/1.json 
+PATCH http://localhost:3000/item_checklists/4.json 
 Content-Type: application/json
 
 {
-  "towels_actual": 2
+  "towels_actual": 4
 }
