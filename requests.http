@@ -148,3 +148,15 @@ Content-Type: application/json
 {
   "rig_id" : 46
 }
+
+### Boolean Checklist Update
+PATCH http://localhost:3000/boolean_checklists/1.json 
+Content-Type: application/json
+
+{
+  "oil_checked": true,
+  "shift": "first"
+}
+
+### Boolean Checklist Destroy
+DELETE http://localhost:3000/boolean_checklists/2.json 
