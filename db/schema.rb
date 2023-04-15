@@ -10,9 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_11_230226) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_15_131422) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "boolean_checklists", force: :cascade do |t|
+    t.boolean "exterior_done", default: false
+    t.boolean "ems_lights", default: false
+    t.boolean "tires_done", default: false
+    t.boolean "oil_checked", default: false
+    t.boolean "sirens", default: false
+    t.boolean "seatbelts", default: false
+    t.boolean "interior_clean", default: false
+    t.string "signed_by"
+    t.string "shift"
+    t.integer "rig_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "checklists", force: :cascade do |t|
     t.boolean "exterior_clean", default: false

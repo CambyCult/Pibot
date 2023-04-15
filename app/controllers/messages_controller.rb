@@ -1,12 +1,14 @@
 class MessagesController < ApplicationController
   def index
-    messages = Message.all
-    render json: messages.as_json
+    @messages = Message.all
+    # render json: messages.as_json
+    render template: "messages/index"
   end
 
   def show
-    message = Message.find_by(id: params["id"])
-    render json: message.as_json
+    @message = Message.find_by(id: params["id"])
+    # render json: message.as_json
+    render template: "messages/show"
   end
 
   def create

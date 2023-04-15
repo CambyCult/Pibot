@@ -1,45 +1,54 @@
-require "faker"
+# require "faker"
 
-User.create(
-  first_name: "jim",
-  last_name: "neville",
-  email: "jim@test.com",
-  password: "password",
-  password_confirmation: "password",
-  admin: true,
-)
+# User.create(
+#   first_name: "jim",
+#   last_name: "neville",
+#   email: "jim@test.com",
+#   password: "password",
+#   password_confirmation: "password",
+#   admin: true,
+# )
 
-12.times do
-  first_name = Faker::Name.unique.first_name
-  users = User.new(
-    first_name: first_name.downcase,
-    last_name: Faker::Name.last_name.downcase,
-    email: first_name.downcase + "@test.com",
-    password: "password",
-    password_confirmation: "password",
-  )
-  users.save
-end
+# 12.times do
+#   first_name = Faker::Name.unique.first_name
+#   users = User.new(
+#     first_name: first_name.downcase,
+#     last_name: Faker::Name.last_name.downcase,
+#     email: first_name.downcase + "@test.com",
+#     password: "password",
+#     password_confirmation: "password",
+#   )
+#   users.save
+# end
 
-6.times do
-  rig_name = Faker::GreekPhilosophers.unique.name
-  rigs = Rig.create!(
-    name: rig_name,
-  )
-end
+# 6.times do
+#   rig_name = Faker::GreekPhilosophers.unique.name
+#   rigs = Rig.create!(
+#     name: rig_name,
+#   )
+# end
+
+# index = 1
+# while index <= 6
+#   checklist = Checklist.new(
+#     rig_id: index,
+#   )
+#   index = index + 1
+#   checklist.save
+# end
 
 index = 1
 while index <= 6
-  checklist = Checklist.new(
+  checklist = BooleanChecklist.new(
     rig_id: index,
   )
   index = index + 1
   checklist.save
 end
 
-Message.create!(
-  date: Time.now,
-  shift: "Second",
-  content: "Clean and well stocked. Weak AC.",
-  user_id: 6,
-)
+# Message.create!(
+#   date: Time.now,
+#   shift: "Second",
+#   content: "Clean and well stocked. Weak AC.",
+#   user_id: 6,
+# )

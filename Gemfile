@@ -49,4 +49,5 @@ end
 gem 'jwt'
 gem 'faker'
 gem 'amoeba'
+gem 'jb'
 

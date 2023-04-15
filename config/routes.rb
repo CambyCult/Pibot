@@ -28,4 +28,6 @@ Rails.application.routes.draw do
   post "/checklists" => "checklists#create"
   patch "/checklists/:id" => "checklists#update"
   delete "/checklists/:id" => "checklists#destroy"
+
+  resources :boolean_checklists
 end
