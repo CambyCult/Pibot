@@ -163,3 +163,19 @@ Content-Type: application/json
 
 ### Boolean Checklist Destroy
 DELETE http://localhost:3000/boolean_checklists/2.json 
+
+### Item Checklist ACTIONS ###############
+### Item Checklist Index
+GET http://localhost:3000/item_checklists.json
+
+### Item Checklist Show
+GET http://localhost:3000/item_checklists/1.json 
+
+
+### Item Checklist Update
+PATCH http://localhost:3000/item_checklists/1.json 
+Content-Type: application/json
+
+{
+  "towels_actual": 2
+}
