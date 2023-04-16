@@ -179,3 +179,28 @@ Content-Type: application/json
 {
   "towels_actual": 4
 }
+
+### ITEM ACTIONS #############################
+
+### Item Index
+GET http://localhost:3000/items.json 
+
+### Item Show
+GET http://localhost:3000/items/1.json 
+
+### Item Create
+POST http://localhost:3000/items.json  
+Content-Type: application/json
+
+{
+  "name": "towels",
+  "minimum": 2
+}
+
+### Item Update 
+PATCH http://localhost:3000/items/1.json 
+Content-Type: application/json
+
+{
+  "minimum": 3
+}
