@@ -193,8 +193,8 @@ POST http://localhost:3000/items.json
 Content-Type: application/json
 
 {
-  "name": "towels",
-  "minimum": 2
+  "name": "exam gloves",
+  "minimum": 10
 }
 
 ### Item Update 
@@ -203,4 +203,21 @@ Content-Type: application/json
 
 {
   "minimum": 3
+}
+
+### Manifest ACTIONS 
+
+### Manifest Index
+GET http://localhost:3000/manifests.json
+
+### Manifest Show
+GET http://localhost:3000/manifests/1.json
+
+### Manifest Create
+POST http://localhost:3000/manifests.json 
+Content-Type: application/json
+
+{
+  "item_id": 2,
+  "actual_count":3
 }

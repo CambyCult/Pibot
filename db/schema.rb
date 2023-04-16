@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_16_012355) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_16_023016) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -67,11 +67,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_16_012355) do
   end
 
   create_table "manifests", force: :cascade do |t|
-    t.integer "rig_id"
     t.integer "item_id"
-    t.integer "actual_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "actual_count"
   end
 
   create_table "messages", force: :cascade do |t|
