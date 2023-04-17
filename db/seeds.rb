@@ -37,13 +37,22 @@
 #   checklist.save
 # end
 
-index = 1
-while index <= 6
-  checklist = BooleanChecklist.new(
-    rig_id: index,
+# boolean_index = 1
+# while boolean_index <= 6
+#   boolean_checklist = BooleanChecklist.new(
+#     rig_id: boolean_index,
+#   )
+#   boolean_index = boolean_index + 1
+#   boolean_checklist.save
+# end
+
+item_checklist_index = 1
+while item_checklist_index <= 6
+  item_checklist = ItemChecklist.new(
+    rig_id: item_checklist_index,
   )
-  index = index + 1
-  checklist.save
+  item_checklist_index = item_checklist_index + 1
+  item_checklist.save
 end
 
 # Message.create!(

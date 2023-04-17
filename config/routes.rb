@@ -30,4 +30,6 @@ Rails.application.routes.draw do
   delete "/checklists/:id" => "checklists#destroy"
 
   resources :boolean_checklists
+
+  resources :item_checklists
 end
