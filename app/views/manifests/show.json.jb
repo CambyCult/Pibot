@@ -1,0 +1,9 @@
+item = Item.find_by(id: params["item_id"])
+
+{
+  id: @manifest.id,
+  item_name: @manifest.item.name,
+  item_minimum: @manifest.item.minimum,
+  actual_count: @manifest.actual_count,
+  rig_checklist_id: @manifest.rig_checklist_id,
+} 

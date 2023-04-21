@@ -1,12 +1,14 @@
 class ManifestsController < ApplicationController
   def index
-    manifests = Manifest.all
-    render json: manifests.as_json
+    @manifests = Manifest.all
+    # render json: manifests.as_json
+    render template: "manifests/index"
   end
 
   def show
-    manifest = Manifest.find_by(id: params["id"])
-    render json: manifest.as_json
+    @manifest = Manifest.find_by(id: params["id"])
+    # render json: manifest.as_json
+    render template: "manifests/show"
   end
 
   def create
