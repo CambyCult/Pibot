@@ -32,4 +32,10 @@ Rails.application.routes.draw do
   resources :boolean_checklists
 
   resources :item_checklists
+
+  resources :items
+
+  resources :manifests
+
+  resources :rig_checklists
 end

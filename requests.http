@@ -69,7 +69,7 @@ Content-Type: application/json
 }
 
 ### Rig Destroy
-DELETE http://localhost:3000/rigs/7.json 
+# DELETE http://localhost:3000/rigs/7.json 
 
 ######## Messages ############
 ### Message Index
@@ -102,36 +102,31 @@ Content-Type: application/json
 ### Message Destroy
 DELETE http://localhost:3000/messages/2.json 
 
-########### CHECKLIST #############
+########### RIG CHECKLIST #############
 
-### Checklist Index
-GET http://localhost:3000/checklists.json 
+### RigChecklist Index
+GET http://localhost:3000/rig_checklists.json 
 
-### Checklist Show
-GET http://localhost:3000/checklists/1.json 
+### RigChecklist Show
+GET http://localhost:3000/rig_checklists/1.json 
 
-### Checklist Create
-POST http://localhost:3000/checklists.json 
-Authorization: Bearer {{{{jwt_supe}}}}
-Content-Type: application/json
+### RigChecklist Create
+POST http://localhost:3000/rig_checklists.json 
 
 {
 
 }
 
-### Checklist Update
-PATCH http://localhost:3000/checklists/1.json 
+### RigChecklist Update
+PATCH http://localhost:3000/rig_checklists/1.json 
 Content-Type: application/json
 
 {
-  "exterior_clean": true,
-  "cones_actual": "15",
-  "siren": true,
-  "rig_id": 2
+  
 }
 
 ### Checklist Destroy
-DELETE http://localhost:3000/checklists/1.json
+# DELETE http://localhost:3000/rig_checklists/1.json
 
 ### Boolean Checklist Actions##############
 
@@ -162,7 +157,7 @@ Content-Type: application/json
 }
 
 ### Boolean Checklist Destroy
-DELETE http://localhost:3000/boolean_checklists/2.json 
+# DELETE http://localhost:3000/boolean_checklists/2.json 
 
 ### Item Checklist ACTIONS ###############
 ### Item Checklist Index
@@ -178,4 +173,52 @@ Content-Type: application/json
 
 {
   "towels_actual": 4
+}
+
+### ITEM ACTIONS #############################
+
+### Item Index
+GET http://localhost:3000/items.json 
+
+### Item Show
+GET http://localhost:3000/items/1.json 
+
+### Item Create
+POST http://localhost:3000/items.json  
+Content-Type: application/json
+
+{
+  "name": "exam gloves",
+  "minimum": 10
+}
+
+### Item Update 
+PATCH http://localhost:3000/items/1.json 
+Content-Type: application/json
+
+{
+  "minimum": 3
+}
+
+### Manifest ACTIONS 
+
+### Manifest Index
+GET http://localhost:3000/manifests.json
+
+### Manifest Show
+GET http://localhost:3000/manifests/1.json
+
+### Manifest Create
+POST http://localhost:3000/manifests.json 
+Content-Type: application/json
+
+{
+  "item_id": 2,
+  "rig_checklist_id": 2,
+  "actual_count":8
+}
+
+### Manifest Update
+{
+  "item_id": 
 }

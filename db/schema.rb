@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_15_202747) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_21_143328) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -59,11 +59,34 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_15_202747) do
     t.string "shift"
   end
 
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.integer "minimum"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "manifests", force: :cascade do |t|
+    t.integer "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "actual_count"
+    t.integer "rig_checklist_id"
+  end
+
   create_table "messages", force: :cascade do |t|
     t.datetime "date"
     t.text "content"
     t.string "shift"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rig_checklists", force: :cascade do |t|
+    t.integer "rig_id"
+    t.string "signed_by"
+    t.boolean "copy", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
