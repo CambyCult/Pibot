@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_21_143328) do
   enable_extension "plpgsql"
 
   create_table "boolean_checklists", force: :cascade do |t|
-    t.boolean "exterior_done", default: false
+    t.boolean "boolean_item1", default: false
     t.boolean "ems_lights", default: false
     t.boolean "tires_done", default: false
     t.boolean "oil_checked", default: false
