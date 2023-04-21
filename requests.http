@@ -214,8 +214,11 @@ Content-Type: application/json
 
 {
   "item_id": 2,
-  "rig_checklist_id": 1,
-  "actual_count":3
+  "rig_checklist_id": 2,
+  "actual_count":8
 }
 
 ### Manifest Update
+{
+  "item_id": 
+}
