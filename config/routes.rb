@@ -36,4 +36,6 @@ Rails.application.routes.draw do
   resources :items
 
   resources :manifests
+
+  resources :rig_checklists
 end

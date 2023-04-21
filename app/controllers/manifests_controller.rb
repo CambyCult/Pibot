@@ -11,9 +11,9 @@ class ManifestsController < ApplicationController
 
   def create
     manifest = Manifest.new(
-      rig_id: params["rig_id"],
       item_id: params["item_id"],
       actual_count: params["actual_count"],
+      rig_checklist_id: params["rig_checklist_id"],
     )
     if manifest.save
       render json: { message: "manifest created" }
@@ -24,9 +24,9 @@ class ManifestsController < ApplicationController
 
   def update
     manifest = Manifest.find_by(id: params["id"])
-    manifest.rig_id = params["rig_id"] || manifest.rig_id
     manifest.item_id = params["item_id"] || manifest.item_id
     manifest.actual_count = params["actual_count"] || manifest.actual_count
+    manifest.rig_checklist_id = params["rig_checklist_id"] || manifest.checklist_id
 
     if manifest.save
       render json: { message: "manifest updated" }

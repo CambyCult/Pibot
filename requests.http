@@ -105,33 +105,28 @@ DELETE http://localhost:3000/messages/2.json
 ########### CHECKLIST #############
 
 ### Checklist Index
-GET http://localhost:3000/checklists.json 
+GET http://localhost:3000/rig_checklists.json 
 
 ### Checklist Show
-GET http://localhost:3000/checklists/1.json 
+GET http://localhost:3000/rig_checklists/1.json 
 
 ### Checklist Create
-POST http://localhost:3000/checklists.json 
-Authorization: Bearer {{{{jwt_supe}}}}
-Content-Type: application/json
+POST http://localhost:3000/rig_checklists.json 
 
 {
 
 }
 
 ### Checklist Update
-PATCH http://localhost:3000/checklists/1.json 
+PATCH http://localhost:3000/rig_checklists/1.json 
 Content-Type: application/json
 
 {
-  "exterior_clean": true,
-  "cones_actual": "15",
-  "siren": true,
-  "rig_id": 2
+  
 }
 
 ### Checklist Destroy
-DELETE http://localhost:3000/checklists/1.json
+DELETE http://localhost:3000/rig_checklists/1.json
 
 ### Boolean Checklist Actions##############
 
@@ -219,5 +214,6 @@ Content-Type: application/json
 
 {
   "item_id": 2,
+  "rig_checklist_id": 1,
   "actual_count":3
 }
