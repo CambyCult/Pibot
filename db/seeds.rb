@@ -28,14 +28,14 @@
 #   )
 # end
 
-index = 1
-while index <= 6
-  rig_checklist = RigChecklist.new(
-    rig_id: index,
-  )
-  index = index + 1
-  rig_checklist.save
-end
+# index = 1
+# while index <= 6
+#   rig_checklist = RigChecklist.new(
+#     rig_id: index,
+#   )
+#   index = index + 1
+#   rig_checklist.save
+# end
 
 # boolean_index = 1
 # while boolean_index <= 6
@@ -46,14 +46,14 @@ end
 #   boolean_checklist.save
 # end
 
-item_checklist_index = 1
-while item_checklist_index <= 6
-  item_checklist = ItemChecklist.new(
-    rig_id: item_checklist_index,
-  )
-  item_checklist_index = item_checklist_index + 1
-  item_checklist.save
-end
+# item_checklist_index = 1
+# while item_checklist_index <= 6
+#   item_checklist = ItemChecklist.new(
+#     rig_id: item_checklist_index,
+#   )
+#   item_checklist_index = item_checklist_index + 1
+#   item_checklist.save
+# end
 
 # Message.create!(
 #   date: Time.now,
@@ -61,3 +61,14 @@ end
 #   content: "Clean and well stocked. Weak AC.",
 #   user_id: 6,
 # )
+
+Item.create!(
+  name: "Bandage Scissors",
+  minimum: 2,
+)
+
+Manifest.create!(
+  item_id: 1,
+  rig_checklist_id: 1,
+  actual_count: 0,
+)

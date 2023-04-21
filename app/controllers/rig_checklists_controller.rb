@@ -13,7 +13,7 @@ class RigChecklistsController < ApplicationController
     rig_checklist = RigChecklist.new(
       rig_id: params["rig_id"],
       signed_by: params["signed_by"],
-      copy: false,
+      copy: params[false],
     )
     if rig_checklist.save
       render json: { message: "checklist created" }
