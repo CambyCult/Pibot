@@ -5,8 +5,9 @@ class RigChecklistsController < ApplicationController
   end
 
   def show
-    rig_checklist = RigChecklist.find_by(id: params["id"])
-    render json: rig_checklist.as_json
+    @rig_checklist = RigChecklist.find_by(id: params["id"])
+    render template: "rig_checklists/show"
+    # render json: rig_checklist.as_json
   end
 
   def create
