@@ -2,6 +2,7 @@ item = Item.find_by(id: params["item_id"])
 
 @manifests.map do |manifest| {
   id: manifest.id,
+  item_id: manifest.item.id,
   item_name: manifest.item.name,
   item_minimum: manifest.item.minimum,
   actual_count: manifest.actual_count,
