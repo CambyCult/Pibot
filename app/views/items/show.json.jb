@@ -1,0 +1,6 @@
+{
+  id: @item.id,
+  name: @item.name,
+  minimum: @item.minimum,
+  rig_checklists: @item.rig_checklists.map { |list| list.rig_id },
+}

@@ -1,12 +1,14 @@
 class ItemsController < ApplicationController
   def index
-    items = Item.all
-    render json: items.as_json
+    @items = Item.all
+    # render json: items.as_json
+    render template: "items/index"
   end
 
   def show
-    item = Item.find_by(id: params["id"])
-    render json: item.as_json
+    @item = Item.find_by(id: params["id"])
+    # render json: item.as_json
+    render template: "items/show"
   end
 
   def create
