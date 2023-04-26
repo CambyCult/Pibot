@@ -1,6 +1,6 @@
-@jwt_supe = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg2NjIzMjN9.RVBwre7OqHsFJLUG70stK4R7M7xhaIKqy23VwTnXKW8
+# @jwt_supe = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg2NjIzMjN9.RVBwre7OqHsFJLUG70stK4R7M7xhaIKqy23VwTnXKW8
 
-@jwt_field = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Nzg2NjIzMDd9.f-wdxG9wCV7KSwaqQQFQA1FsDhaRPbhS_lhObNAYsw8
+# @jwt_field = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2Nzg2NjIzMDd9.f-wdxG9wCV7KSwaqQQFQA1FsDhaRPbhS_lhObNAYsw8
 
 ### Sessions New (Supervisor)
 POST http://localhost:3000/sessions.json  
@@ -21,7 +21,7 @@ Content-Type: application/json
 
 ### Users Index
 GET http://localhost:3000/users.json
-Authorization: Bearer {{jwt_supe}}
+
 
 ### Users Show
 GET http://localhost:3000/users/1.json
@@ -55,7 +55,7 @@ DELETE http://localhost:3000/users/14.json
 ########### RIG ##############
 ### Rig Index
 GET http://localhost:3000/rigs.json 
-Authorization: Bearer {{jwt_supe}}
+
 
 ### Rig Show
 GET http://localhost:3000/rigs/1.json 
@@ -213,12 +213,9 @@ POST http://localhost:3000/manifests.json
 Content-Type: application/json
 
 {
-  "item_id": 2,
-  "rig_checklist_id": 2,
-  "actual_count":8
+  "item_id": 1,
+  "rig_checklist_id": 1,
+  "actual_count":2
 }
 
 ### Manifest Update
-{
-  "item_id": 
-}
