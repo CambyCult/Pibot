@@ -122,7 +122,7 @@ PATCH http://localhost:3000/rig_checklists/1.json
 Content-Type: application/json
 
 {
-  
+  "signed_by": "test"
 }
 
 ### Checklist Destroy

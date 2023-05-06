@@ -31,6 +31,8 @@ class RigChecklistsController < ApplicationController
     rig_checklist.copy = params["copy"] || rig_checklist.copy
 
     if rig_checklist.save
+      cloned_checklist = rig_checklist.amoeba_dup
+      cloned_checklist.save
       render json: { message: "checklist updated" }
     else
       render json: { error: rig_checklist.errors.full_messages }
