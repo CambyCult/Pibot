@@ -1,1 +1,7 @@
-
+@rig_checklists.map do |checklist|
+  {
+    rig_id: checklist.rig_id,
+    copy: checklist.copy,
+    manifests: checklist.manifests_long,
+  }
+end

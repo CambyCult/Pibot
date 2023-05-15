@@ -1,8 +1,8 @@
 class RigChecklistsController < ApplicationController
   def index
-    rig_checklists = RigChecklist.all
-    # render template: "rig_checklists/index"
-    render json: rig_checklists.as_json
+    @rig_checklists = RigChecklist.all
+    render template: "rig_checklists/index"
+    # render json: rig_checklists.as_json
   end
 
   def show
