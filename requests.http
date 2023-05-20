@@ -118,7 +118,7 @@ POST http://localhost:3000/rig_checklists.json
 }
 
 ### RigChecklist Update
-PATCH http://localhost:3000/rig_checklists/1.json 
+PATCH http://localhost:3000/rig_checklists/6.json 
 Content-Type: application/json
 
 {
@@ -206,7 +206,7 @@ Content-Type: application/json
 GET http://localhost:3000/manifests.json
 
 ### Manifest Show
-GET http://localhost:3000/manifests/1.json
+GET http://localhost:3000/manifests/49.json
 
 ### Manifest Create
 POST http://localhost:3000/manifests.json 
@@ -219,3 +219,9 @@ Content-Type: application/json
 }
 
 ### Manifest Update
+PATCH http://localhost:3000/manifests/49.json 
+Content-Type: application/json
+
+{
+  "actual_count": 3
+}

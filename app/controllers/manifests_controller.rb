@@ -28,7 +28,6 @@ class ManifestsController < ApplicationController
     manifest = Manifest.find_by(id: params["id"])
     manifest.item_id = params["item_id"] || manifest.item_id
     manifest.actual_count = params["actual_count"] || manifest.actual_count
-    manifest.rig_checklist_id = params["rig_checklist_id"] || manifest.checklist_id
 
     if manifest.save
       render json: { message: "manifest updated" }
