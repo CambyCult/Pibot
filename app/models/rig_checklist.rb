@@ -15,6 +15,8 @@ class RigChecklist < ApplicationRecord
     self.manifests.each do |manifest|
       manifest_obj = {
         manifest_id: manifest.id,
+        checklist_id: manifest.rig_checklist.id,
+        rig_id: manifest.rig_checklist.rig_id,
         item: manifest.item.name,
         minimum: manifest.item.minimum,
         actual_count: manifest.actual_count,
