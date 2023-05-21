@@ -1,8 +1,8 @@
 class RigChecklistsController < ApplicationController
   def index
-    rig_checklists = RigChecklist.all
-    # render template: "rig_checklists/index"
-    render json: rig_checklists.as_json
+    @rig_checklists = RigChecklist.all
+    render template: "rig_checklists/index"
+    # render json: rig_checklists.as_json
   end
 
   def show
@@ -31,6 +31,8 @@ class RigChecklistsController < ApplicationController
     rig_checklist.copy = params["copy"] || rig_checklist.copy
 
     if rig_checklist.save
+      cloned_checklist = rig_checklist.amoeba_dup
+      cloned_checklist.save
       render json: { message: "checklist updated" }
     else
       render json: { error: rig_checklist.errors.full_messages }
