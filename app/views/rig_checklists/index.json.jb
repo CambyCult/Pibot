@@ -1,7 +1,10 @@
 @rig_checklists.map do |checklist|
   {
+    id: checklist.id,
     rig_id: checklist.rig_id,
     copy: checklist.copy,
     manifests: checklist.manifests_long,
+    date: checklist.updated_at.strftime("%m/%d/%Y/%T"),
+    signed_by: checklist.signed_by,
   }
 end

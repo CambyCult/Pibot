@@ -223,5 +223,5 @@ PATCH http://localhost:3000/manifests/49.json
 Content-Type: application/json
 
 {
-  "actual_count": 3
+  "actual_count": null
 }
